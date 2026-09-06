@@ -1,0 +1,35 @@
+stroke:
+  num_ctrl_pts: 4
+  ctrl_pt_slice: [0,8]
+  width_slice: [8,10]
+  opacity_slice: [10,12]
+  hardness_slice: [12,14]
+  rgb_slice: [14,17]
+
+rasterizer:
+  splats_per_stroke: 24
+  sigma: 2.0
+  min_hardness_exponent: 0.5
+  max_hardness_exponent: 3.0
+  sharpness: 1.0
+  overlap_factor: 1.5
+  bbox_pad: 0.02
+
+optimizer:
+  stroke_init_mean: 0.25
+  stroke_init_std: 0.1
+  n_strokes: 2048
+  n_iters: 4000
+  max_grad_norm: 1.0
+  stroke_reset_interval: 250
+  stroke_reset_until_iter: 2000
+  stroke_reset_ratio: 0.01
+
+loss:
+  w_recon: 1.0
+  w_perc: 0.1
+  w_sparse: 0.01
+
+model:
+  depth_model_name: depth-anything/Depth-Anything-V2-Base-hf
+  vgg_input_size: 256
