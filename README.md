@@ -2,7 +2,7 @@
 
 StrokeGS is a 2D Gaussian splatting pipeline that reconstructs images by optimizing parametric Bézier curves.
 
-<video src="assets/demo.mp4" autoplay loop muted controls width="100%"></video>
+![Demo](assets/demo.gif)
 _Reconstruction of image `0808` from the [DIV2K validation set](https://data.vision.ee.ethz.ch/cvl/DIV2K), using 2048 cubic Bézier curves._
 
 ## Installation
