@@ -469,7 +469,7 @@ namespace strokegs
         state.basis = torch::empty({splats_per_stroke, num_ctrl_pts}, opts);
         state.deriv = torch::empty({splats_per_stroke, num_ctrl_pts}, opts);
 
-        precompute_bernstein<<<cuda::ceil_div(splats_per_stroke, block_threads), block_threads>>>(
+        precompute_bernstein<<<cuda::ceil_div<int64_t>(splats_per_stroke, block_threads), block_threads>>>(
             state.basis.data_ptr<float>(),
             state.deriv.data_ptr<float>(), splats_per_stroke);
 
